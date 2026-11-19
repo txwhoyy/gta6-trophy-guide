@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline trophy guide and tracker for all 55 official Grand Theft Auto VI PS5 trophies: a guide for each, a platinum roadmap, filters, a spoiler shield and saved progress.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="skyline" aria-hidden="true"></div>
+<header class="hero">
+  <p class="kicker">Grand Theft Auto VI · PlayStation 5 · Offline guide &amp; tracker</p>
+  <h1>Leonida Legend</h1>
+  <p class="tagline">Every one of the 55 official trophies, explained in plain words — with a roadmap to the platinum, missable warnings and a spoiler shield for the story.</p>
+  <section class="progress-panel" aria-label="Overall progress">
+    <div class="ring-wrap">
+      <svg class="ring" viewBox="0 0 120 120" role="img" aria-label="Overall completion ring">
+        <circle class="ring-track" cx="60" cy="60" r="52"></circle>
+        <circle class="ring-fill" id="ringFill" cx="60" cy="60" r="52"></circle>
+      </svg>
+      <div class="ring-label"><span id="ringPct">0%</span><small>complete</small></div>
+    </div>
+    <div class="progress-detail">
+      <p class="big-count"><span id="earnedCount">0</span> of 55 trophies earned</p>
+      <div class="bar"><div class="bar-fill" id="barFill"></div></div>
+      <ul class="tier-counts" id="tierCounts"></ul>
+      <p class="next-hint" id="nextHint"></p>
+    </div>
+  </section>
+</header>
+
+<main>
+  <section class="panel" id="roadmapPanel" aria-labelledby="roadmapTitle">
+    <h2 id="roadmapTitle">Roadmap to the platinum</h2>
+    <p class="panel-sub">Five phases, ordered the way the official descriptions suggest playing them. Nothing here needs a second playthrough if you catch the flagged trophies on your first pass.</p>
+    <ol class="roadmap" id="roadmap"></ol>
+  </section>
+
+  <section class="panel" aria-labelledby="catsTitle">
+    <h2 id="catsTitle">Progress by category</h2>
+    <div class="cat-grid" id="catGrid"></div>
+  </section>
+
+  <section class="panel controls-panel" aria-label="Filters and progress tools">
+    <div class="control-row">
+      <div class="chip-group" role="group" aria-label="Filter by tier" id="tierChips">
+        <button type="button" class="chip active" data-tier="all">All tiers</button>
+        <button type="button" class="chip" data-tier="platinum">Platinum</button>
+        <button type="button" class="chip" data-tier="gold">Gold</button>
+        <button type="button" class="chip" data-tier="silver">Silver</button>
+        <button type="button" class="chip" data-tier="bronze">Bronze</button>
+      </div>
+      <div class="chip-group" role="group" aria-label="Filter by kind" id="kindChips">
+        <button type="button" class="chip active" data-kind="all">All kinds</button>
+        <button type="button" class="chip" data-kind="story">Story</button>
+        <button type="button" class="chip" data-kind="missable">Missable</button>
+        <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+        <button type="button" class="chip" data-kind="activities">Activities</button>
+        <button type="button" class="chip" data-kind="online">Online / co-op</button>
+      </div>
+    </div>
+    <div class="control-row">
+      <label class="search-box">Search <input id="search" type="search" placeholder="heist, fishing, cards…" autocomplete="off"></label>
+      <label class="switch"><input type="checkbox" id="spoilerToggle" checked> <span>Spoiler shield</span> <small>hide unearned story trophies</small></label>
+      <label class="switch"><input type="checkbox" id="hideEarned"> <span>Hide earned</span></label>
+      <div class="tool-buttons">
+        <button type="button" id="exportBtn">Export progress</button>
+        <label class="import-label">Import progress <input id="importFile" type="file" accept="application/json"></label>
+        <button type="button" id="resetBtn" class="danger">Reset</button>
+      </div>
+    </div>
+    <p class="showing" id="showingLine"></p>
+  </section>
+
+  <section id="cards" class="cards" aria-live="polite"></section>
+
+  <section class="panel sources" aria-labelledby="sourcesTitle">
+    <h2 id="sourcesTitle">Sources &amp; honesty notes</h2>
+    <ul id="sourceList"></ul>
+    <p>The 28 hidden trophies on the official list carry deliberately cryptic descriptions. Where a description is hidden or vague, the guide on that card says so and stays general instead of inventing “confirmed” steps. Trophies flagged <strong>potentially missable</strong> are flagged from their descriptions (a specific place, moment or choice), not from a claim that the game can never offer a second chance.</p>
+    <p class="fan-note">Unofficial fan-made guide. Not affiliated with Rockstar Games or Take-Two Interactive. No game artwork, logos or screenshots are used; the sunset styling is original CSS.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Progress is saved in your browser (localStorage) — export it before switching devices. This app works fully offline: open <code>app/index.html</code> and everything runs locally.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
