@@ -129,7 +129,6 @@ main, footer {
 .ring circle { fill: none; stroke-width: 11; }
 .ring-track { stroke: #472a75; }
 .ring-fill {
-  stroke: url(#none);
   stroke: var(--pink-hot);
   stroke-linecap: round;
   stroke-dasharray: 326.7;
@@ -228,10 +227,10 @@ main, footer {
 .card[data-grade="bronze"] { border-left-color: var(--bronze); }
 .card.earned { opacity: 0.78; }
 .card.earned .trophy-name { text-decoration: line-through; text-decoration-color: var(--teal); }
-.card-top { display: flex; align-items: flex-start; gap: 10px; }
+.card-top { display: flex; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
 .card-top input[type="checkbox"] { width: 22px; height: 22px; accent-color: var(--teal); flex: none; margin-top: 2px; cursor: pointer; }
-.trophy-name { font-size: 19px; margin: 0; line-height: 1.25; }
-.badges { display: flex; gap: 6px; flex-wrap: wrap; margin-left: auto; flex: none; }
+.trophy-name { font-size: 19px; margin: 0; line-height: 1.25; flex: 1 1 150px; }
+.badges { display: flex; gap: 6px; flex-wrap: wrap; flex: 1 1 100%; margin-left: 32px; }
 .badge {
   font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
   border-radius: 999px; padding: 3px 9px; border: 1px solid var(--line); color: var(--muted);
